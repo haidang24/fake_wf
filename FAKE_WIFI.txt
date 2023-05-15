@@ -1,5 +1,6 @@
                                         ---CÁCH TẠO WIFI FAKE WITH KALI_LINUX---
                                            ---Đánh cắp thông tin qua wifi---
+                                       ------có thể áp dụng trong phòng thi------
 Bước 1: Vào terminal trên kali-linux
   ** Nếu bạn chạy với quyền quản trị viên root thì bỏ chữ sudo nếu chạy bình thường thì phải có sudo trước lệnh ** 
   ** Chạy lệnh sudo apt-get update **
