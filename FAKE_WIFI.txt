@@ -8,7 +8,7 @@ Bước 2: Kiểm tra card wifi
    sudo ifconfig
 
 Bước 3: Vào chế độ amitor
-   sudo airmon-ng start wlan0
+   sudo airmon-ng start wlan0 (không thể sử dung trên máy ảo nếu muốn phải có usb wifi)
 
 Bước 4: Tìm địa chỉ BSSID của wifi muốn fake
    sudo airodump-ng wlan0mon (một số máy có thể khác do card wifi) ----- (Ngoài ra bạn có teh63 sử dụng mdk3)
